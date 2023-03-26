@@ -7,7 +7,7 @@ N, M = map(int, sys.stdin.readline().split())
 nums = [0 for _ in range(M)]
 isused = [0 for _ in range(N+1)]
 
-def func(k):
+def DFS(k):
     if(k == M):
         print(*nums)
     else:
@@ -15,7 +15,7 @@ def func(k):
             if(isused[i] == 0):
                 isused[i] = 1
                 nums[k] = i
-                func(k+1)
+                DFS(k+1)
                 isused[i] = 0
 
-func(0)
+DFS(0)
