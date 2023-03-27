@@ -1,32 +1,18 @@
 # 1038 - 감소하는 수 (백트래킹)
 
-N = int(input(''))
+import sys
 
-num_list = []
+N = int(sys.stdin.readline())
 
-dig = 0
-num = 1
+# k = 자릿수
+# cnt = 감소하는 수 카운트
 
-num_list[0] = 1
-num_list[1] = 0
+nums = [0 for _ in range(7)]
 
-for i in range(N):
-    pflag = 1
-    if(i / 10 == 0):
-        answer = i
-        continue
-
-    a = str(i)
-    dig = len(a)
-
-    for j in range(dig-1):
-        if(num_list[j] <= num_list[j+1]):
-            pflag = 0
-
-    if(pflag == 1):
-        answer = i
+def DFS(k, cnt, temp):
+    if(cnt == N):
+        print(*nums)
     else:
-        '통과 X'
-
-
-print(answer)
+        for i in range(1, 10):
+            nums[k] = i
+            DFS(k+1, cnt+1, i)
