@@ -16,10 +16,13 @@ for i in range(9):
 blanklen = len(blank)
 isused = [0 for _ in range(blanklen)]
 
-def DFS(k, cnt):
-    global maps
-    global isused
-    
+k = blanklen
+cnt = 0
+while(1):
+    print(1)
+    if(cnt == blanklen):
+        cnt = 0
+
     if(k == 0):
         for i in range(9):
             ans = ''.join(str(s) for s in maps[i])
@@ -80,16 +83,17 @@ def DFS(k, cnt):
                             
                             
             temp = 0
-            cnt = 0
+            cnt2 = 0
             
             for i in range(1, 10):
                 if(nums[i] == 0):
-                    cnt += 1
+                    cnt2 += 1
                     temp = i
                     
-            if(cnt == 1):
+            if(cnt2 == 1):
                 maps[x][y] = temp
-                isused[cnt] = 1
+                isused[cnt2] = 1
+                k -= 1
+                cnt += 1
             else:
-                
-DFS(blanklen)
+                cnt += 1
