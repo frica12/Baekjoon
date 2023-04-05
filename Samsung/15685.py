@@ -1,5 +1,6 @@
 # 15685 - 드래곤 커브 Gold4
 # 삼성 SW 역량테스트 2018 상반기 오후 1번 문제
+# 코드트리 '드래곤 커브'
 
 import sys
 from collections import deque

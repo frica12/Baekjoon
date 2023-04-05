@@ -1,5 +1,6 @@
 # 16235 - 나무 재테크 Gold3
-# 삼성 SW 역량테스트 2021 상반기 오후 1번 문제
+# 삼성 SW 역량테스트 2018 하반기 오후 1번 문제
+# 코드트리 '바이러스 실험'
 
 import sys
 from collections import deque
