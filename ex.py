@@ -1,22 +1,66 @@
-# cnt = 10
+# 평소학습 1 - 자료형 실습
 
-# for j in range(cnt):
-#     print("hi")
+# 1
+temp1 = 10
+temp2 = 10.5
+print(type(temp1))
+print(type(temp2))
 
-########################################################################
+# 2
+temp3 = 'abc'
+temp4 = True
+print(type(temp3))
+print(type(temp4))
 
-# from itertools import combinations
+# 3
+temp = '2'
+temp = int(temp)
 
-# comblist = [1, 3, 4, 5, 6, 7, 9, 10, 11, 12,
-#             14, 15, 16, 17, 18, 20, 21, 22, 23, 24, 25]
+# 4
+temp = 400
+temp = str(temp)
 
-# combi = list(combinations(comblist, 2))
+# 5
+a = 12.5
+b = 25.4
+print(a + b)
+print(int(a) + int(b))
 
-# xx = [1, 2, 3]
+print("-------------------------------------------------------------------")
 
-# if xx[0] in combi[1]:
-#     print('hi')
-# else:
-#     print('bye')
+# 평소학습 1 - 문자열 실습
+s = 'Monty Python'
 
-########################################################################
+# 1
+print(len(s))
+
+# 2 
+print(s.count('o'))
+
+# 3 
+print(s.find('P'))
+
+# 4 
+print(s.upper())
+print(s.lower())
+
+# 5
+print(s.replace(' ', '-'))
+
+print("-------------------------------------------------------------------")
+
+# 평소학습 1 - 리스트 실습
+score = [88, 75, 95, 90, 82, 99, 88, 79, 85]
+
+# 1
+print(len(score))
+
+# 2
+print(max(score))
+print(min(score))
+
+# 3 
+print(sum(score))
+
+# 4
+score2 = score
