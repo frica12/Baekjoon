@@ -9,18 +9,12 @@ board = []
 for i in range(n):
     board.append(list(map(int, sys.stdin.readline().split())))
 
-if(max(map(max, board)) == 0):
-    print(0)
-    print(0)
-    exit()
-        
 dq = deque()
 
 dx = [1, 0, -1, 0]
 dy = [0, 1, 0, -1]
 
 year = 0
-
 while True:
     board[0][0] = -1
     dq.append([0, 0])
@@ -36,14 +30,15 @@ while True:
                     board[nx][ny] = -1
                 elif(board[nx][ny] > 0):
                     board[nx][ny] += 1
-    cnt = 0
-    cnt2 = 0
+
+    cnt, cnt2 = 0, 0
+    
     for i in range(n):
         for j in range(m):
             if(board[i][j] == 1):
                 board[i][j] = 1
                 cnt2 += 1
-            elif(board[i][j] > 2):
+            elif(board[i][j] > 1):
                 board[i][j] = 0
                 cnt += 1
             else:
