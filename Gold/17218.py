@@ -1,4 +1,4 @@
-# 9252 - LCS 2(DP)
+# 17218 - 비밀번호 만들기 (DP)
 
 import sys
 
@@ -23,5 +23,4 @@ for i in range(1, s1len+1):
             else:
                 dp[i][j] = dp[i][j-1]
 
-print(len(dp[s1len][s2len]))
 print(dp[s1len][s2len])
