@@ -6,7 +6,6 @@ def DFS(level, cnt):
     else:
         for i in range(cnt, 10):
             num_list[level] = i+1
-            DFS(level+1, i+1)
-            
-            
+            DFS(level+1, i+1)   
+
 DFS(0, 0)
